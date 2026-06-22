@@ -15,9 +15,7 @@ const cheatsRaw = [
     { name: "Excellent Upgrade", displayName: "Excellent Upgrade", banner: "https://i.ytimg.com/vi/koO0FQJ7XDc/maxresdefault.jpg", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsOPEXHy5CCUm4RFJtm2dpNmMpW73YYXWlFg&s", zipFile: "Excellent_Upgrade.zip", desc_ru: "Элитный приватный клиент с уникальной системой маскировки пакетов для минимального шанса бана и продвинутым Scaffold.", fileType: ".exe", lastUpdate: "14.05.2026" },
     { name: "Liquid Bounce", displayName: "Liquid Bounce", banner: "https://i.ytimg.com/vi/itr89WPl4wo/maxresdefault.jpg", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzns_cj0NhOQXomaxsaoo1x6Ikp81JSRNs4g&s", zipFile: "Liquid_Bounce.zip", desc_ru: "Легендарный бесплатный чит-клиент на базе Forge с открытым исходным кодом, мощными обходами и поддержкой JavaScript-скриптов.", fileType: ".exe", lastUpdate: "10.05.2026" },
     { name: "Wurst Client", displayName: "Wurst Client", banner: "https://avatars.mds.yandex.net/i?id=cb3d7c928c8c96575feca49591391726_l-5257871-images-thumbs&n=13", icon: "https://i.ytimg.com/vi/SD7kXDA4dU0/maxresdefault.jpg", zipFile: "Wurst_Client.zip", desc_ru: "Один из старейших, самых известных и стабильных бесплатных чит-клиентов для Minecraft.", fileType: ".exe", lastUpdate: "09.05.2026" },
-    // 👇 НОВЫЙ КЛИЕНТ "FIX CLIENT"
-    { name: "Fix", displayName: "Fix Client", banner: "https://avatars.mds.yandex.net/i?id=da024be62223cfae9e2f1efee05e30f88ddec9c8-4568991-images-thumbs&n=13", icon: "https://avatars.mds.yandex.net/i?id=da024be62223cfae9e2f1efee05e30f88ddec9c8-4568991-images-thumbs&n=13", zipFile: "Fix_Client.zip", desc_ru: "Специализированный фикс-клиент для устранения багов и повышения стабильности игры. Облегчённая версия с минимальным оверхеадом.", fileType: ".exe", lastUpdate: "21.06.2026" }
-];
+   ];
 
 function formatNumberShort(num) {
     if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
@@ -116,7 +114,7 @@ function attachEvents() {
             const fileName = btn.getAttribute('data-file');
             if (fileName) {
                 showToast(`✅ Загрузка ${fileName} началась...`);
-                window.location.href = `https://github.com/TopFreeCheats/website/blob/main/${fileName}`;
+                window.location.href = `https://raw.githubusercontent.com/TopFreeCheats/website/main/${fileName}`;
             } else {
                 showToast(`❌ Ошибка: файл не найден`);
             }
